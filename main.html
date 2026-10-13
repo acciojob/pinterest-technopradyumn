@@ -1,16 +1,74 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pinterest-like Hero Section</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Arial, sans-serif; }
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 60px;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+
+  .hero-text {
+    flex: 1;
+    max-width: 480px;
+  }
+
+  .hero-text h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    color: #111;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+    color: #555;
+    margin: 0 0 30px;
+  }
+
+  .explore-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #e60023;
+    color: #ffffff;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .hero img {
+    width: 500px;
+    max-width: 50%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .hero { flex-direction: column; padding: 24px; }
+    .hero img { max-width: 100%; width: 100%; height: 300px; }
+    .hero-text h1 { font-size: 36px; }
+  }
+</style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Get your next great idea</h1>
+      <p>Discover recipes, home ideas, style inspiration and more.</p>
+      <a href="#" class="explore-btn">Explore now</a>
+    </div>
+    <img src="https://storage.googleapis.com/acciojob-open-file-collections/pinterest.png" alt="Hero image">
+  </div>
 </body>
-
 </html>
